@@ -243,6 +243,7 @@ void Performance::webkitClearMeasures(const String& measureName)
 
 double Performance::now() const
 {
+    fprintf(stdout, "* Performance::now()\n");
     return 1000.0 * m_frame->document()->loader()->timing()->monotonicTimeToZeroBasedDocumentTime(monotonicallyIncreasingTime());
 }
 
